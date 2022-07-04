@@ -1,0 +1,60 @@
+{
+    "products":[
+        {
+            "id":1,
+            "name":"iPhone 13",
+            "desc":"Apple iPhone 13th generation",
+            "price":1299,
+            "color":"#33505a",
+            "imgUrl":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoBSfDylnaZUcyxRkMWkFK7n64JZgvyYponA&usqp=CAU"
+        },
+        {
+            "id":2,
+            "name":"Pixel 6",
+            "desc":"Google Pixel phone 6th generation",
+            "price":799,
+            "color":"#00ac51",
+            "imgUrl":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0zOMqY7vfNaODUdsd1TgtVyU8bCUdQit0Hw&usqp=CAU"
+        },
+        {
+            "id":3,
+            "name":"M1 MacBook Air",
+            "desc":"Apple MacBook Air with apple silicon phone",
+            "price":999,
+            "color":"#f73984",
+            "imgUrl":"https://help.apple.com/assets/6062258EBFC7E7487E19DBB0/60622591BFC7E7487E19DBBA/en_US/540d7697864354f0c0bed1741209d7f1.png"
+        },
+        {
+            "id":4,
+            "name":"iPad Pro",
+            "desc":"Apple iPad Pro 2020 edition",
+            "price":799,
+            "color":"#f73984",
+            "imgUrl":"https://cdn.macstories.net/img_2287-1621270775533.jpeg"
+        },
+        {
+            "id":6,
+            "name":"AirPods Pro",
+            "desc":"Apple AirPods Pro 1st generation",
+            "price":199,
+            "color":"#e3e4e9",
+            "imgUrl":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfXXbJi6R1WlAKBM-6mWok-gJlmZ7lj_8JyQ&usqp=CAU"
+        },
+        {
+            "id":7,
+            "name":"PlayStation 5",
+            "desc":"Sony PlayStaion 5th generation",
+            "price":999,
+            "color":"#e3e4e9",
+            "imgUrl":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTr7BBWbwZeFwM36gUrJmDuoLl8R7qo5v-u5Ej6O_NxXJ_2nvzwTS32DBwFnCu2IajjSqk&usqp=CAU"
+        },
+        {
+            "id":8,
+            "name":"Galaxy Watch 4",
+            "desc":"Samsung galaxy smart watch 4th gen",
+            "price":499,
+            "color":"#e3e4e9",
+            "imgUrl":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSdoNs7IsiuR6yBI0qAmBmjl33MW6oC4EBjA&usqp=CAU"
+        }
+    ]
+}
