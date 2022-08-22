@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_cataloge/utils/routes.dart';
 import 'package:velocity_x/velocity_x.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+
+// FirebaseAuth auth = FirebaseAuth.instance;
 
 class LoginPage extends StatefulWidget {
   @override
@@ -8,16 +12,35 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  // text controller
+  final _emailController = TextEditingController();
+  final _passwordController = TextEditingController();
   String name = "";
   bool changeButton = false;
 
   final _formKey = GlobalKey<FormState>();
+
+  // Future signIn() async {
+  //   await FirebaseAuth.instance.signInWithEmailAndPassword(
+  //     email: _emailController.text
+  //         .trim(), //text,trim to just get txt and after formating
+  //     password: _passwordController.text.trim(),
+  //   );
+  // }
+
+  // void dispose() {
+  //   // nothing much just disposing variable for better memory management
+  //   _emailController.dispose();
+  //   _passwordController.dispose();
+  //   super.dispose();
+  // }
 
   moveToHome(BuildContext context) async {
     if (_formKey.currentState!.validate()) {
       setState(() {
         changeButton = true;
       });
+
       await Future.delayed(Duration(seconds: 1));
       await Navigator.pushNamed(context, MyRoutes.homeRoute);
       setState(() {
@@ -58,7 +81,10 @@ class _LoginPageState extends State<LoginPage> {
                     const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
                 child: Column(
                   children: [
+                    //******** */
+
                     TextFormField(
+                        controller: _emailController,
                         decoration: InputDecoration(
                           hintText: "Enter Username",
                           labelText: "Username",
@@ -75,7 +101,11 @@ class _LoginPageState extends State<LoginPage> {
                           name = value;
                           setState(() {});
                         }),
+
+                    //******** */
+
                     TextFormField(
+                      controller: _passwordController,
                       obscureText: true,
                       decoration: InputDecoration(
                         hintText: "Enter Password",
@@ -97,9 +127,10 @@ class _LoginPageState extends State<LoginPage> {
                       color: context.theme.buttonColor,
                       borderRadius:
                           BorderRadius.circular(changeButton ? 50 : 6),
-                      child: InkWell(
+                      child: GestureDetector(
                         // splashColor: Colors.red,
                         onTap: () async => moveToHome(context),
+                        //signIn(),                         //**** */
                         child: AnimatedContainer(
                           duration: Duration(seconds: 1),
                           width: changeButton ? 50 : 150,
